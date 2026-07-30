@@ -5,46 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <style>
+        @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 2. Tu l'appliques à ton élément */
+.nav-link {
+  animation: pulse 2s infinite;
+}
+
         body{
             max-width: 100%;
             background: rgb(32, 30, 30);
         }
         h1{
             color: white;
-            font-family: ;
+            
+          
+            font-weight: bold;
+            font-size: 10vh;
+            margin-bottom: 20px;
         }
         p{
             color: white;
+            margin: 60px;
         }
-        nav{
+        .navbar{
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
             width: auto;
             height: 40px;
             color: white;
             text-align: right;
-            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            justify-content: space-between;
+            padding-left: 10px;
+            
+            
 
         }
-        button{
-            padding : 4px;
-            width : 80px;
-            heigh : 30px;
+        .nav-link{
+            display: flex;
+            gap: 60px;
         }
+         a{
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            transition: color 200ms;
+             
+           
+         
+        }
+        a:hover{
+            color: aqua;
+            
+          
+            
+        }
+       
+         button{
+            padding : 4px;
+            margin-top: 20px;
+            width : 90px;
+            height : 40px;
+            font-size: smaller;
+            border-radius: 1px;
+            border: none;
+            background-color: white;
+            justify-content: start;
+            align-items:start ;
+             transition: 200ms;
+             animation: pulse infinite;
+            
+        }
+        button:hover{
+            background: black;
+            color: white;
+            transform: scale(1.1);
+        }
+        .tof{
+            float: left; width: 45% ;  height: 550px; margin-right: 100px; margin-top: 2px;
+        }
+        span{
+            color: whitesmoke;
+        }
+        .my{
+            text-align: left;
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          
+            color: whitesmoke;
+        }
+        
     </style>
 </head>
 <body>
-    <nav>
-        Accueil
-        À propos
-        Contact
-
+    <nav class="navbar">
+        <div class="my">my<br> portfolio</div>
+        <div class="nav-link">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+           </div>
     </nav>
-    <h1 >Mon ________________<br>
+    <img src="img.jpg.jpg" alt="photo" class="tof">
+    <h1 >Mon <span>─────────────</span><br>
         Portfolio
     </h1>
     <p>
   Bienvenue sur mon portfolio. Découvrez une sélection de mes projets récents en Développement web,<br> conçus avec passion pour allier design moderne, stratégie et efficacité.
 </p>
     <button>Explore Now</button>
+  
 </body>
 </html>
