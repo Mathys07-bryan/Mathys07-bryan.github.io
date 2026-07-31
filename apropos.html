@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+ 
+  background-color: #121214; 
+  color: #e1e1e6;
+  line-height: 1.6;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #18181b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.my {
+  text-transform: uppercase;
+  font-family: Impact, sans-serif;
+  color:#00f2fe ;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a1a1aa;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00f2fe; 
+}
+
+
+  
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+
+.header-section {
+  margin-bottom: 50px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #00f2fe;
+}
+
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.about-card {
+  background-color: #18181b;
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-card h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.about-card p {
+  color: #a1a1aa;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.about-card strong {
+  color: #ffffff;
+}
+
+
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, #18181b 0%, #222226 100%);
+}
+
+.quote-card h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  color: #d4d4d8;
+  border-left: 3px solid #00f2fe;
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #a1a1aa;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981; /* Vert connecté */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Section Compétences */
+.skills-section h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #18181b;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 242, 254, 0.4);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00f2fe;
+  margin-bottom: 12px;
+}
+
+.skill-card h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  color: #71717a;
+  font-size: 0.88rem;
+}
+
+/* RESPONSIVE (Mobiles) */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <div class="my">my<br>portfolio</div>
+    <div class="nav-links">
+      <a href="index.html" >Accueil</a>
+      <a href="apropos.html" class="active">À propos</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  
+  <main class="container">
+    
+   
+    <header class="header-section">
+      <span class="badge">Parcours & Vision</span>
+      <h1>Créer avec <span class="highlight">logique</span>,<br>concevoir avec passion.</h1>
+    </header>
+
+    
+    <section class="about-grid">
+      <div class="about-card">
+        <h2>Qui suis-je ?</h2>
+        <p>
+          Étudiant en <strong>Génie Logiciel</strong>, je suis captivé par le développement web moderne et l'architecture logicielle. Je perfectionne activement mes compétences autour des technologies <strong>JavaScript, React et TailwindCSS</strong>.
+        </p>
+        <p>
+          Ce qui m'a poussé vers cette voie, c'est la rigueur de la <em>logique informatique</em> : cette capacité unique à décomposer un problème complexe pour construire des solutions élégantes et donner vie à des idées novatrices.
+        </p>
+      </div>
+
+      <div class="about-card quote-card">
+        <h3>Ma philosophie</h3>
+        <blockquote>
+          « Transformer des concepts complexes en interfaces fluides et fonctionnelles. »
+        </blockquote>
+        <div class="status-indicator">
+          <span class="dot"></span> En constante apprentissage & recherche de projets
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="skills-section">
+      <h2>Technologies en apprentissage</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <div class="skill-icon">JS</div>
+          <h3>JavaScript (ES6+)</h3>
+          <p>Logique algorithmique, manipulation du DOM et programmation asynchrone.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⚛️</div>
+          <h3>React</h3>
+          <p>Création d'interfaces utilisateur réactives, modulaires et composants réutilisables.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>TailwindCSS</h3>
+          <p>Stylisation rapide, responsive design et intégration de systèmes de design modernes.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Génie Logiciel</h3>
+          <p>Conception orientée objet, structures de données et bonnes pratiques de dev.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
